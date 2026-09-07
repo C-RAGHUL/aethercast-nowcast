@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: aethercast-nowcast
+    runtime: docker
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: ENVIRONMENT
+        value: production

@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  aethercast:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aethercast-nowcast
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - HOST=0.0.0.0
+      - ENVIRONMENT=production
